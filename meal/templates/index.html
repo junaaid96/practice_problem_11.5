@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="my-5">Meal</h1>
+
+<div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+    {% for meal in meals%}
+    <div class="col">
+        <div class="card">
+            <img
+                src="{{meal.strMealThumb}}"
+                class="card-img-top"
+                alt="{{meal.strMeal}}"
+            />
+            <div class="card-body">
+                <h5 class="card-title">{{meal.strMeal}}</h5>
+                <p class="card-text">
+                    Food is not just sustenance; it is an art that tantalizes
+                    the senses and nourishes the body. From the vibrant colors
+                    of fresh produce to the enticing aromas of a sizzling pan,
+                    food is a multisensory experience that transcends cultural
+                    boundaries.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
